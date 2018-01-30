@@ -1,0 +1,21 @@
+{
+  "manifest_version": "1",
+  "api_version": "1",
+  "name": "Exit Budgie",
+  "description": "Logout / Reboot / Shutdown functions for Budgie desktop.",
+  "developer_name": "bashfulrobot",
+  "icon": "images/exit.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "Budgie_session_ext",
+      "type": "keyword",
+      "name": "Exit Budgie",
+      "description": "Logout / Reboot / Shutdown functions for Budgie desktop.",
+      "default_value": "exit"
+    }
+  ]
+}
+
