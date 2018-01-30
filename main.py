@@ -43,19 +43,19 @@ class KeywordQueryEventListener(EventListener):
                         items.append(ExtensionResultItem(icon='images/shutdown.png',
                                                         name='Shutdown',
                                                         description='Power off computer',
-                                                        on_enter=RunScriptAction("Budgie-session-quit --power-off", None)))
+                                                        on_enter=RunScriptAction("systemctl poweroff", None)))
                         included.append('shutdown')
                     elif option in ['restart', 'reboot'] and 'reboot' not in included:
                         items.append(ExtensionResultItem(icon='images/reboot.png',
                                                     name='Reboot',
                                                     description='Reboot computer',
-                                                    on_enter=RunScriptAction("Budgie-session-quit --reboot", None)))
+                                                    on_enter=RunScriptAction("systemctl reboot", None)))
                         included.append('reboot')
                     elif option in ['logout']:
                         items.append(ExtensionResultItem(icon='images/logout.png',
                                                     name='Logout',
                                                     description='Logout from session',
-                                                    on_enter=RunScriptAction("Budgie-session-quit --logout", None)))
+                                                    on_enter=RunScriptAction("systemctl restart display-manager", None)))
 
             return RenderResultListAction(items)
 
